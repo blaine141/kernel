@@ -227,6 +227,13 @@
 			default-state = "on";
 		};
 	};
+
+	gpio-poweroff {
+		compatible = "gpio-poweroff";
+		gpios = <&gpio GPIOX_9 GPIO_ACTIVE_LOW>;
+		timeout-ms = <20000>;
+		input;
+	};
 };
 
 &ao_pinctrl {
